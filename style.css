@@ -1,0 +1,770 @@
+/* =======================
+   IASIP ROULETTE THEME
+   Full CSS replacement
+======================= */
+
+* {
+	box-sizing: border-box;
+	-webkit-tap-highlight-color: transparent;
+}
+
+:root {
+	--sunny-yellow: #f6c400;
+	--sunny-yellow-light: #ffe15a;
+	--sunny-gold: #d99a00;
+	--sunny-orange: #bf5b1b;
+	--pub-red: #8f2118;
+	--pub-green: #214f31;
+	--black: #080706;
+	--charcoal: #14120f;
+	--dark-card: #191610;
+	--cream: #fff4cc;
+	--paper: #f8e3a0;
+	--muted: #b7a46d;
+	--line: rgba(255, 236, 148, 0.28);
+	--shadow: rgba(0, 0, 0, 0.45);
+}
+
+html,
+body {
+	margin: 0;
+	min-height: 100%;
+	background:
+		radial-gradient(circle at 12% 0%, rgba(246, 196, 0, 0.45), transparent 28%),
+		radial-gradient(circle at 90% 12%, rgba(143, 33, 24, 0.35), transparent 28%),
+		linear-gradient(180deg, #25200f 0%, #0b0a08 55%, #050403 100%);
+	color: var(--cream);
+	font-family: 'Poppins', Arial, sans-serif;
+	text-align: center;
+	overflow-x: hidden;
+}
+
+body {
+	position: relative;
+	max-width: 640px;
+	margin: 0 auto;
+	padding: 18px 16px 26px;
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	inset: 0;
+	pointer-events: none;
+	background:
+		linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+	background-size: 22px 22px;
+	mix-blend-mode: overlay;
+	opacity: 0.35;
+}
+
+body::after {
+	content: "PADDY'S";
+	position: fixed;
+	right: -32px;
+	bottom: 54px;
+	transform: rotate(-10deg);
+	font-family: 'Anton', sans-serif;
+	font-size: 58px;
+	letter-spacing: 4px;
+	color: rgba(246, 196, 0, 0.045);
+	pointer-events: none;
+}
+
+/* =======================
+   HEADER / TITLE
+======================= */
+
+header {
+	position: relative;
+	margin: 4px auto 16px;
+	padding: 16px 10px 6px;
+}
+
+header::before {
+	content: "FX-STYLE CHAOS PICKER";
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 8px;
+	padding: 5px 10px;
+	border: 1px solid rgba(255, 244, 204, 0.35);
+	border-radius: 999px;
+	background: rgba(0, 0, 0, 0.28);
+	color: var(--sunny-yellow-light);
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+	font-weight: 800;
+	letter-spacing: 1.4px;
+	text-shadow: none;
+}
+
+h1 {
+	position: relative;
+	margin: 0;
+	color: var(--sunny-yellow);
+	font-family: 'Bebas Neue', 'Anton', sans-serif;
+	font-size: clamp(46px, 13vw, 72px);
+	font-weight: 900;
+	line-height: 0.86;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow:
+		3px 3px 0 #000,
+		6px 6px 0 rgba(143, 33, 24, 0.85),
+		0 0 22px rgba(246, 196, 0, 0.22);
+}
+
+h1::after {
+	content: "The Gang Lets Fate Pick";
+	display: block;
+	width: fit-content;
+	margin: 12px auto 0;
+	padding: 6px 12px;
+	border-radius: 12px;
+	background: var(--black);
+	color: var(--cream);
+	border: 2px solid var(--sunny-yellow);
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: 900;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	transform: rotate(-1deg);
+	box-shadow: 0 7px 0 rgba(0, 0, 0, 0.45);
+}
+
+/* =======================
+   MAIN APP CARD
+======================= */
+
+.app {
+	width: 100%;
+	position: relative;
+}
+
+.picker-section,
+#favoritesSection,
+#recentSection {
+	position: relative;
+	max-width: 560px;
+	margin-left: auto;
+	margin-right: auto;
+	border: 2px solid var(--line);
+	background:
+		linear-gradient(180deg, rgba(255, 225, 90, 0.12), rgba(0, 0, 0, 0.22)),
+		linear-gradient(145deg, rgba(25, 22, 16, 0.96), rgba(9, 8, 6, 0.98));
+	box-shadow:
+		0 18px 32px var(--shadow),
+		inset 0 1px 0 rgba(255, 255, 255, 0.08);
+	backdrop-filter: blur(8px);
+}
+
+.picker-section {
+	padding: 18px;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.picker-section::before {
+	content: "";
+	position: absolute;
+	inset: 0 0 auto 0;
+	height: 126px;
+	background:
+		radial-gradient(circle at 20% 30%, rgba(255, 244, 204, 0.28), transparent 22%),
+		radial-gradient(circle at 75% 14%, rgba(143, 33, 24, 0.32), transparent 28%),
+		linear-gradient(135deg, var(--sunny-yellow), #f28b16 72%);
+	border-bottom: 4px solid rgba(0, 0, 0, 0.75);
+	pointer-events: none;
+}
+
+.picker-section::after {
+	content: "RUM HAM • MILKSTEAK • NIGHTMAN • WILDCARD";
+	position: absolute;
+	top: 86px;
+	left: 50%;
+	width: 120%;
+	transform: translateX(-50%) rotate(-2deg);
+	padding: 8px 0;
+	background: rgba(0, 0, 0, 0.82);
+	color: var(--sunny-yellow-light);
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 18px;
+	letter-spacing: 2px;
+	white-space: nowrap;
+	pointer-events: none;
+}
+
+.picker-section>* {
+	position: relative;
+	z-index: 1;
+}
+
+#pickBtn {
+	margin-top: 112px;
+}
+
+/* =======================
+   BUTTONS
+======================= */
+
+button {
+	border: none;
+	cursor: pointer;
+	font-family: 'Anton', 'Poppins', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.7px;
+	transition:
+		transform 0.12s ease,
+		box-shadow 0.12s ease,
+		filter 0.12s ease;
+}
+
+button:active {
+	transform: translateY(3px) scale(0.985);
+	box-shadow: 0 3px 0 rgba(0, 0, 0, 0.7) !important;
+}
+
+#pickBtn,
+#huluBtn,
+#saveBtn {
+	display: block;
+	width: 100%;
+	border-radius: 20px;
+	font-size: 22px;
+	font-weight: 900;
+}
+
+#pickBtn {
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 18px 18px;
+	background:
+		linear-gradient(180deg, var(--sunny-yellow-light), var(--sunny-yellow));
+	color: #111;
+	border: 3px solid #111;
+	box-shadow:
+		0 8px 0 #000,
+		0 18px 28px rgba(0, 0, 0, 0.45);
+}
+
+#pickBtn::before {
+	content: "🎲 ";
+}
+
+#huluBtn {
+	max-width: 500px;
+	margin: 14px auto 0;
+	padding: 15px 18px;
+	background: linear-gradient(180deg, #2e7a43, var(--pub-green));
+	color: var(--cream);
+	border: 2px solid rgba(255, 244, 204, 0.28);
+	box-shadow: 0 7px 0 rgba(0, 0, 0, 0.75);
+}
+
+#huluBtn::before {
+	content: "▶ ";
+}
+
+#saveBtn {
+	max-width: 430px;
+	margin: 14px auto 0;
+	padding: 14px 18px;
+	background: linear-gradient(180deg, #b72e22, var(--pub-red));
+	color: white;
+	border: 2px solid rgba(255, 244, 204, 0.24);
+	box-shadow: 0 7px 0 rgba(0, 0, 0, 0.75);
+}
+
+#saveBtn::before {
+	content: "★ ";
+}
+
+/* =======================
+   CLASSIC TOGGLE
+======================= */
+
+.classic-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+	width: fit-content;
+	margin: 15px auto 0;
+	padding: 10px 13px;
+	border-radius: 999px;
+	background: rgba(0, 0, 0, 0.48);
+	border: 1px solid rgba(255, 244, 204, 0.22);
+	color: var(--cream);
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	font-weight: 900;
+	line-height: 1.2;
+}
+
+.classic-toggle input {
+	width: 19px;
+	height: 19px;
+	accent-color: var(--sunny-yellow);
+}
+
+/* =======================
+   RESULT BOX
+======================= */
+
+#result {
+	max-width: 500px;
+	min-height: 116px;
+	margin: 17px auto 0;
+	padding: 18px 17px;
+	border-radius: 22px;
+	background:
+		linear-gradient(180deg, rgba(255, 244, 204, 0.96), rgba(248, 227, 160, 0.94));
+	color: #17120a;
+	border: 3px solid #0b0905;
+	box-shadow:
+		0 8px 0 rgba(0, 0, 0, 0.82),
+		0 16px 24px rgba(0, 0, 0, 0.38);
+	font-family: 'Poppins', sans-serif;
+	font-size: 17px;
+	font-weight: 900;
+	line-height: 1.45;
+}
+
+#result:empty::before {
+	content: "Pick a random episode and let the gang ruin your night.";
+	display: block;
+	color: rgba(23, 18, 10, 0.62);
+	font-weight: 900;
+}
+
+#result strong {
+	display: block;
+	margin-top: 4px;
+	color: #000;
+	font-family: 'Bebas Neue', 'Anton', sans-serif;
+	font-size: 34px;
+	line-height: 0.95;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+}
+
+/* =======================
+   SECTIONS
+======================= */
+
+#favoritesSection,
+#recentSection {
+	margin-top: 22px;
+	padding: 16px;
+	border-radius: 26px;
+}
+
+#favoritesSection h2,
+#recentSection h2 {
+	margin: 10px 0 12px;
+	color: var(--sunny-yellow);
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 38px;
+	line-height: 0.9;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	text-shadow:
+		2px 2px 0 #000,
+		4px 4px 0 rgba(143, 33, 24, 0.75);
+}
+
+#favoritesSection h2::before {
+	content: "★ ";
+	color: var(--cream);
+}
+
+#recentSection h2::before {
+	content: "↺ ";
+	color: var(--cream);
+}
+
+/* =======================
+   SORT BUTTONS
+======================= */
+
+.sort-buttons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 9px;
+	margin-bottom: 8px;
+}
+
+#sortRatingBtn,
+#sortSeasonBtn {
+	width: 100%;
+	padding: 11px 8px;
+	border-radius: 16px;
+	background: rgba(255, 244, 204, 0.12);
+	color: var(--cream);
+	border: 1px solid rgba(255, 244, 204, 0.22);
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: 900;
+	box-shadow: 0 5px 0 rgba(0, 0, 0, 0.55);
+}
+
+/* =======================
+   FAVORITES LIST
+======================= */
+
+#favoritesList {
+	max-height: 410px;
+	overflow-y: auto;
+	padding: 2px 3px 6px;
+	scrollbar-width: thin;
+	scrollbar-color: var(--sunny-yellow) rgba(0, 0, 0, 0.25);
+}
+
+#favoritesList:empty::before {
+	content: "No favorites yet. Save the episodes that deserve to live in infamy.";
+	display: block;
+	padding: 18px 10px;
+	color: var(--muted);
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	font-weight: 800;
+	line-height: 1.4;
+}
+
+.favorite-card {
+	max-width: 500px;
+	margin: 12px auto;
+	padding: 15px;
+	border-radius: 20px;
+	background:
+		linear-gradient(180deg, rgba(255, 244, 204, 0.98), rgba(239, 200, 101, 0.95));
+	color: #17120a;
+	border: 3px solid #0b0905;
+	box-shadow:
+		0 7px 0 rgba(0, 0, 0, 0.82),
+		0 14px 20px rgba(0, 0, 0, 0.35);
+}
+
+.favorite-card h3 {
+	margin: 0 0 8px;
+	font-family: 'Bebas Neue', 'Anton', sans-serif;
+	font-size: 31px;
+	line-height: 0.95;
+	letter-spacing: 0.6px;
+	text-transform: uppercase;
+}
+
+.favorite-card p {
+	margin: 0 0 10px;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	font-weight: 900;
+	color: rgba(23, 18, 10, 0.72);
+}
+
+/* =======================
+   STARS + GOAT
+======================= */
+
+.stars {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	margin: 4px 0 8px;
+}
+
+.stars button {
+	width: 38px;
+	height: 38px;
+	padding: 0;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.08);
+	color: #000;
+	box-shadow: none;
+	font-size: 23px;
+	line-height: 1;
+}
+
+.goat-btn {
+	display: block;
+	width: fit-content;
+	margin: 8px auto 10px;
+	padding: 7px 18px;
+	border-radius: 999px;
+	background: #d7d0bf;
+	color: #242016;
+	border: 2px solid rgba(0, 0, 0, 0.2);
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: 1000;
+	box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+.goat-active {
+	background: linear-gradient(180deg, var(--sunny-yellow-light), var(--sunny-yellow));
+	color: #090806;
+	border-color: #090806;
+	box-shadow:
+		0 4px 0 #000,
+		0 0 18px rgba(246, 196, 0, 0.45);
+}
+
+/* =======================
+   FAVORITE ACTIONS
+======================= */
+
+.favorite-actions {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 10px;
+	margin-top: 8px;
+}
+
+.favorite-actions button {
+	width: 100%;
+	height: 45px;
+	padding: 0;
+	border-radius: 16px;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	font-weight: 1000;
+	box-shadow: 0 5px 0 rgba(0, 0, 0, 0.58);
+}
+
+.open-fav-btn {
+	background: linear-gradient(180deg, #2e7a43, var(--pub-green));
+}
+
+.remove-btn {
+	background: linear-gradient(180deg, #b72e22, var(--pub-red));
+}
+
+/* =======================
+   RECENT EPISODES
+======================= */
+
+#recentHint {
+	margin: -2px 0 12px;
+	color: var(--muted);
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	font-weight: 900;
+	animation: pulseHint 1.8s ease-in-out infinite;
+}
+
+#recentList {
+	max-height: 330px;
+	overflow-y: auto;
+	padding: 2px 3px 6px;
+	scrollbar-width: thin;
+	scrollbar-color: var(--sunny-yellow) rgba(0, 0, 0, 0.25);
+}
+
+#recentList:empty::before {
+	content: "Your last 10 picks will show up here.";
+	display: block;
+	padding: 18px 10px;
+	color: var(--muted);
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	font-weight: 800;
+	line-height: 1.4;
+}
+
+.recent-card {
+	max-width: 500px;
+	margin: 9px auto;
+	padding: 13px 14px;
+	border-radius: 17px;
+	background:
+		linear-gradient(180deg, rgba(255, 244, 204, 0.95), rgba(248, 227, 160, 0.91));
+	color: #17120a;
+	border: 2px solid rgba(0, 0, 0, 0.9);
+	box-shadow: 0 5px 0 rgba(0, 0, 0, 0.72);
+	font-family: 'Poppins', sans-serif;
+	font-size: 13px;
+	font-weight: 900;
+	line-height: 1.35;
+	cursor: pointer;
+}
+
+.recent-card strong {
+	display: block;
+	margin-bottom: 2px;
+	font-family: 'Bebas Neue', sans-serif;
+	font-size: 24px;
+	line-height: 0.95;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+}
+
+/* =======================
+   FOOTER
+======================= */
+
+footer {
+	max-width: 520px;
+	margin: 18px auto 0;
+	padding: 12px 10px 8px;
+	color: rgba(255, 244, 204, 0.58);
+	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
+	line-height: 1.45;
+}
+
+/* =======================
+   ANIMATIONS
+======================= */
+
+@keyframes pulseHint {
+	0% {
+		transform: scale(1);
+		opacity: 0.72;
+	}
+
+	50% {
+		transform: scale(1.035);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(1);
+		opacity: 0.72;
+	}
+}
+
+@keyframes tapBounce {
+	0% {
+		transform: scale(1);
+	}
+
+	40% {
+		transform: scale(0.96);
+	}
+
+	70% {
+		transform: scale(1.035);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.tap-bounce {
+	animation: tapBounce 0.25s ease;
+}
+
+/* =======================
+   DESKTOP VERSION
+======================= */
+
+@media (min-width: 900px) {
+	body {
+		max-width: 1080px;
+		padding: 24px 22px 32px;
+	}
+
+	header {
+		margin-bottom: 18px;
+	}
+
+	h1 {
+		font-size: 82px;
+	}
+
+	.app {
+		display: grid;
+		grid-template-columns: minmax(390px, 1.05fr) minmax(320px, 0.95fr);
+		gap: 20px;
+		align-items: start;
+	}
+
+	.picker-section {
+		max-width: none;
+		grid-row: span 2;
+		padding: 22px;
+	}
+
+	#favoritesSection,
+	#recentSection {
+		max-width: none;
+		margin-top: 0;
+	}
+
+	#recentSection {
+		margin-top: 20px;
+	}
+
+	#pickBtn {
+		margin-top: 122px;
+		font-size: 28px;
+		padding: 20px 20px;
+	}
+
+	#huluBtn,
+	#saveBtn {
+		font-size: 22px;
+	}
+
+	#result {
+		font-size: 20px;
+		min-height: 142px;
+	}
+
+	#result strong {
+		font-size: 46px;
+	}
+
+	#favoritesList {
+		max-height: 390px;
+	}
+
+	#recentList {
+		max-height: 285px;
+	}
+}
+
+/* =======================
+   SMALL PHONES
+======================= */
+
+@media (max-width: 390px) {
+	body {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+
+	h1 {
+		font-size: 43px;
+	}
+
+	.picker-section,
+	#favoritesSection,
+	#recentSection {
+		border-radius: 24px;
+	}
+
+	.picker-section {
+		padding: 15px;
+	}
+
+	#pickBtn,
+	#huluBtn,
+	#saveBtn {
+		font-size: 19px;
+	}
+
+	#result strong {
+		font-size: 30px;
+	}
+
+	.sort-buttons {
+		grid-template-columns: 1fr;
+	}
+}
