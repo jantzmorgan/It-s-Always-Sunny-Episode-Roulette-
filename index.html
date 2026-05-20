@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>It's Always Sunny Roulette</title>
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="style.css?v=4">
+</head>
+
+<body>
+
+	<header>
+		<h1>
+			It's Always Sunny <br>
+			Episode Roulette
+		</h1>
+	</header>
+
+	<main class="app">
+
+		<section class="picker-section">
+			<button id="pickBtn">Pick Random Episode</button>
+
+			<label class="classic-toggle">
+				<input type="checkbox" id="classicMode">
+				Classic Seasons Only (1-8)
+			</label>
+
+			<button id="huluBtn">Open IASIP on Hulu</button>
+
+			<p id="result"></p>
+
+			<button id="saveBtn">Save Favorite</button>
+		</section>
+
+		<section id="favoritesSection">
+			<div class="sort-buttons">
+				<button id="sortRatingBtn">Sort by Rating</button>
+				<button id="sortSeasonBtn">Sort by Season</button>
+			</div>
+
+			<h2>Favorite Episodes</h2>
+
+			<div id="favoritesList"></div>
+		</section>
+
+		<section id="recentSection">
+			<h2>Last 10 Episodes</h2>
+
+			<p id="recentHint">Tap an episode to select it</p>
+
+			<div id="recentList"></div>
+		</section>
+
+	</main>
+
+	<footer>
+		Unofficial fan-made episode picker.<br>
+		It's Always Sunny in Philadelphia and related trademarks belong to their respective owners.
+	</footer>
+
+	<script src="script.js?v=3"></script>
+
+</body>
+
+</html>
